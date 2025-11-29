@@ -1,5 +1,9 @@
 import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 import planetsRouter from "./routes/planets/planets.router.js";
+
+dotenv.config();
 
 const app = express();
 
