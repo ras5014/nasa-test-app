@@ -1,0 +1,24 @@
+{
+  "name": "nasa-test-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "npm run server & npm run client",
+    "build": "npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ras5014/nasa-test-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ras5014/nasa-test-app/issues"
+  },
+  "homepage": "https://github.com/ras5014/nasa-test-app#readme"
+}
