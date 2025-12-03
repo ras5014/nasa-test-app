@@ -1,7 +1,7 @@
 import http from "http";
 import dotenv from "dotenv";
-import app from "./app.js";
-import { loadPlanetsData } from "./models/planets.model.js";
+import app from "./app.ts";
+import { loadPlanetsData } from "./models/planets.model.ts";
 
 dotenv.config();
 
