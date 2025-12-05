@@ -5,8 +5,10 @@ import path from "path";
 import morgan from "morgan";
 import planetsRouter from "./routes/planets/planets.router.ts";
 import launchRouter from "./routes/launches/launches.router.ts";
-import { errorHandler } from "./middlewares/errorHandler.middleware.ts";
-import { notFound } from "./middlewares/notFound.middleware.ts";
+import {
+  errorHandler,
+  notFound,
+} from "./middlewares/errorHandler.middleware.ts";
 
 dotenv.config();
 

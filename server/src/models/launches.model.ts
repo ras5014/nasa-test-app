@@ -31,3 +31,13 @@ export const addNewLaunch = (launch) => {
     })
   );
 };
+
+export const abortLaunch = (flightNumber: number) => {
+  if (!launches.has(flightNumber)) {
+    throw { statusCode: 404, message: "Launch not found" };
+  }
+  const aborted = launches.get(flightNumber);
+  aborted.upcoming = false;
+  aborted.success = false;
+  return aborted;
+};
