@@ -5,6 +5,7 @@ import {
   getAllLaunches,
 } from "../../models/launches.model.ts";
 import { successResponse } from "../../utils/responses.ts";
+import { newLaunchSchema } from "./launches.types.ts";
 
 export const httpGetAllLaunches = (
   req: Request,
@@ -25,7 +26,7 @@ export const httpAddNewLaunch = (
   next: NextFunction
 ) => {
   try {
-    const launch = req.body;
+    const launch = newLaunchSchema.parse(req.body);
     launch.launchDate = new Date(launch.launchDate);
     addNewLaunch(launch);
     successResponse(res, launch, 201, "Launch added successfully");
