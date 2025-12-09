@@ -1,0 +1,2 @@
+For setting up tests follow this link:
+https://medium.com/@natnael.awel/how-to-setup-testing-for-typescript-with-express-js-example-83d3efbb6fd4
