@@ -1,2 +1,19 @@
-For setting up tests follow this link:
-https://medium.com/@natnael.awel/how-to-setup-testing-for-typescript-with-express-js-example-83d3efbb6fd4
+When you want to revise this:
+1) Look how the server.ts and app.ts file is written & structured
+   - How middlewares are written
+   - How routes are written
+   - How logging is done
+   - How folder structure is maintained
+   - How inside utils/responses.ts common response for all apis are written
+
+2) Look how the routes and models are written
+   - All fetching logic from Db is written in model.ts file
+   - Controller is only responsible for sending response to client
+
+3) Look how tests are written
+   For setting up tests follow this link: https://medium.com/@natnael.awel/how-to-setup-testing-for-typescript-with-express-js-example-83d3efbb6fd4
+
+4) Node Performance
+   1 - Certain methods like [JSON.stringify(), JSON.parse(), Node Crypto modules, Array sorting] are blocking functions and will take longer & add up for multiple simultaneous requests
+   2 - Cluster modules
+       - When we run server, the master process runs, We make different child processes by calling fork() function
